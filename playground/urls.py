@@ -1,4 +1,5 @@
 from django.urls import path
+from playground.views import succesful_register
 from . import views
 
 urlpatterns = [
@@ -9,6 +10,9 @@ urlpatterns = [
     path('courses/', views.courses, name='courses'),
     path('trainers/', views.trainers, name='trainers'),
     path('contact/', views.contact, name='contact'),
-    path('contact', views.course_details, name='course-details'),
-    path('homepage/', views.homepage, name='homepage')
+    path('course-details', views.course_details, name='course-details'),
+    path('homepage/', views.homepage, name='homepage'),
+    path('course-section/', views.course_section, name='course-section'),
+    path('starter-page/', views.starter_page, name='starter-page'),
+    path('succesful-register/', views.succesful_register, name='succesful-register')
 ]

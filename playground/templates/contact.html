@@ -3,6 +3,8 @@
 {% block title %}Contact{% endblock %}
 
 {% block content %}
+
+{% load static %}
 <main class="main">
 
   <!-- Page Title -->
@@ -20,7 +22,7 @@
     <nav class="breadcrumbs">
       <div class="container">
         <ol>
-          <li><a href="{% static 'index' %}">Home</a></li>
+          <li><a href="{% url 'index' %}">Home</a></li>
           <li class="current">Contact</li>
         </ol>
       </div>

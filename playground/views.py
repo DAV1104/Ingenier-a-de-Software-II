@@ -16,7 +16,7 @@ def login(request):
 
         if user is not None:
             auth_login(request, user)
-            return redirect('dashboard')  
+            return redirect('homepage')  
         else:
             messages.error(request, 'Email o contraseña incorrectos. Por favor, inténtalo de nuevo.')
             return redirect('login') 
@@ -39,19 +39,15 @@ def register(request):
         hashed_password = make_password(contrasena)
 
         try:
-            # Create a new User instance and save it to the database
             user = User.objects.create_user(username=email, email=email, password=hashed_password)
 
-            # Create a new Usuario instance and associate it with the User instance
             usuario = Usuario.objects.create(nombre_completo=nombre_completo, nombre_usuario=nombre_usuario, email=email, password=hashed_password, user=user)
             print("Usuario creado exitosamente")
+            return redirect('succesful_register')
         except Exception as e:
             print("Error al crear usuario:", str(e))
             error_message = "Error al crear usuario. Por favor, inténtalo de nuevo."
             return render(request, 'registration.html', {'error_message': error_message})
-
-        return redirect('login')
-
     else:
         return render(request, 'register.html')
 
@@ -78,3 +74,9 @@ def course_section(request):
 
 def homepage(request):
     return render(request, 'homepage.html')
+
+def starter_page(request):
+    return render(request, 'starter_page.html')
+
+def succesful_register(request):
+    return render(request, 'successful_register.html')

@@ -1,0 +1,135 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% load static %}
+<!-- Welcome section -->
+<section class="welcome-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2>Bienvenido, David</h2>
+                <p>Hemos preparado una serie de cursos recomendados para ti. Ve a la sección de <a href="#recommended-courses-section">Recomendados</a> para descubrir nuevos contenidos.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'manos.png' %}" alt="imagen-bienvenida">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Courses section for trainers -->
+<section class="courses-section">
+    <div class="container">
+        <h3>Tus cursos</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="course-carousel owl-carousel owl-theme">
+                    <!-- Loop through the trainer's courses and display them as cards -->
+                    <div class="item">
+                        <div class="card">
+                            <img src="{% static 'img/copy-paste.png' %}" class="card-img-top" alt="copy-paste">
+                            <div class="card-body">
+                                <h5 class="card-title">Copiar y Pegar texto</h5>
+                                <p class="card-text">Aprende a copiar y pegar texto en windows facilmente</p>
+                                <a href="{% url 'course-details' %}" class="btn btn-primary">Ver curso</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="{% static 'img/borrar.jpg' %}" class="card-img-top" alt="[descripción de la imagen]">
+                            <div class="card-body">
+                                <h5 class="card-title">Borrar archivos en windows</h5>
+                                <p class="card-text">Aprende a borrar archivos de windows facilmente</p>
+                                <a href="{% url 'course-details' %}" class="btn btn-primary">Ver curso</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="{% static 'img/youtube-bajar-videos.jpg' %}" class="card-img-top" alt="[descripción de la imagen]">
+                            <div class="card-body">
+                                <h5 class="card-title">Descargar videos de Youtube</h5>
+                                <p class="card-text">Aprende a descargar videos de youtube facilmente</p>
+                                <a href="{% url 'course-details' %}" class="btn btn-primary">Ver curso</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End loop -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Subscribed courses section for students -->
+<section class="subscribed-courses-section">
+    <div class="container">
+        <h3>Tus cursos inscritos</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="course-carousel owl-carousel owl-theme">
+                    <!-- Loop through the student's subscribed courses and display them as cards -->
+                    <div class="item">
+                        <div class="card">
+                            <img src="[ruta de la imagen del curso 4]" class="card-img-top" alt="[descripción de la imagen]">
+                            <div class="card-body">
+                                <h5 class="card-title">[nombre del curso 4]</h5>
+                                <p class="card-text">[descripción del curso 4]</p>
+                                <a href="[ruta del curso 4]" class="btn btn-primary">Ver curso</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="[ruta de la imagen del curso 5]" class="card-img-top" alt="[descripción de la imagen]">
+                            <div class="card-body">
+                                <h5 class="card-title">[nombre del curso 5]</h5>
+                                <p class="card-text">[descripción del curso 5]</p>
+                                <a href="[ruta del curso 5]" class="btn btn-primary">Ver curso</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card">
+                            <img src="[ruta de la imagen del curso 6]" class="card-img-top" alt="[descripción de la imagen]">
+                            <div class="card-body">
+                                <h5 class="card-title">[nombre del curso 6]</h5>
+                                <p class="card-text">[descripción del curso 6]</p>
+                                <a href="[ruta del curso 6]" class="btn btn-primary">Ver curso</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End loop -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Recommended courses section -->
+<section id="recommended-courses-section" class="recommended-courses-section">
+    <div class="container">
+        <h3>Tus cursos inscritos</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="course-carousel owl-carousel owl-theme">
+                    <!-- Loop through the student's subscribed courses and display them as cards -->
+                    <div class="item">
+                        <div class="card">
+                            <img src="[ruta de la imagen del curso 4]" class="card-img-top" alt="[descripción de la imagen]">
+                            <div class="card-body">
+                                <h5 class="card-title">[nombre del curso 4]</h5>
+                                <p class="card-text">[descripción del curso 4]</p>
+                                <a href="[ruta del curso 4]" class="btn btn-primary">Ver curso</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ... -->
+</section>
+
+{% endblock %}

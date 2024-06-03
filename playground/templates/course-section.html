@@ -1,0 +1,99 @@
+{% extends 'layout.html' %}
+
+{% block title %}Course Section{% endblock %}
+
+{% block content %}
+<main>
+  <!-- Course section --><!-- Course section -->
+  <section class="course-section">
+    <div class="container">
+      <h2>Abrir archivos de Excel</h2>
+      <div class="row">
+        <div class="col-md-8 order-md-1">
+          <!-- Video section -->
+          <div class="video-section">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                class="embed-responsive-item"
+                src="{% static 'img/videoplayback.mp4' %}"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 order-md-2">
+          <!-- Modules section -->
+          <div class="modules-section">
+            <h3>Módulos</h3>
+            <div class="accordion" id="modulesAccordion">
+              <!-- Loop through the modules and display them as accordion items -->
+              <div class="card">
+                <div class="card-header" id="heading[número del módulo]">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link btn-block text-left"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapse[número del módulo]"
+                      aria-expanded="true"
+                      aria-controls="collapse[número del módulo]"
+                    >
+                      Abrelo
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapse[número del módulo]"
+                  class="collapse"
+                  aria-labelledby="heading[número del módulo]"
+                  data-parent="#modulesAccordion"
+                >
+                  <div class="card-body">
+                    <!-- Loop through the lessons in the module and display them as list items -->
+                    <ul>
+                      <li style="font-style: none;">Abrir archivos</li>
+                      <!-- End loop -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- End loop -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Comments section -->
+      <div class="comments-section">
+        <h3>Comentarios</h3>
+        <!-- Display the comments for the course -->
+        <div class="media">
+          <img
+            src="{% static 'img/385410753024211.jpeg' %}"
+            class="mr-3"
+            alt="la_estudiosa123"
+          />
+          <div class="media-body">
+            <h5 class="mt-0">la_estudiosa123</h5>
+            waos, tutorial efectivo
+          </div>
+        </div>
+        <!-- End loop -->
+        <!-- Comment form -->
+        <form action="/submit_comment" method="post">
+          <div class="form-group">
+            <label for="comment">Agregar comentario:</label>
+            <textarea
+              class="form-control"
+              id="comment"
+              name="comment"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

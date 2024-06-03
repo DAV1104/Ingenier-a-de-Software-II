@@ -12,7 +12,9 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway", sans-serif;
   --nav-font: "Poppins", sans-serif;
 }
@@ -26,7 +28,7 @@
   --heading-color: #37423b;
   --heading-color-rgb: 55, 66, 59;
   --accent-color: #b9b70e;
-  --accent-color-rgb: 95, 207, 128;
+  --accent-color-rgb: 141, 73, 37;
   --contrast-color: #ffffff;
   --contrast-color-rgb: 255, 255, 255;
 }
@@ -188,7 +190,7 @@ h6 {
     padding-right: 0;
   }
 
-  .navmenu li:hover>a,
+  .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
@@ -227,11 +229,11 @@ h6 {
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
+  .navmenu .dropdown ul li:hover > a {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown:hover>ul {
+  .navmenu .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -243,7 +245,7 @@ h6 {
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
+  .navmenu .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: -100%;
@@ -343,7 +345,7 @@ h6 {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown>.dropdown-active {
+  .navmenu .dropdown > .dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -370,7 +372,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu > ul {
     display: block;
   }
 }
@@ -493,7 +495,7 @@ h6 {
   border-color: var(--accent-color);
 }
 
-.footer .footer-newsletter .newsletter-form input[type=email] {
+.footer .footer-newsletter .newsletter-form input[type="email"] {
   border: 0;
   padding: 4px 8px;
   width: 100%;
@@ -501,11 +503,11 @@ h6 {
   color: var(--default-color);
 }
 
-.footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
+.footer .footer-newsletter .newsletter-form input[type="email"]:focus-visible {
   outline: none;
 }
 
-.footer .footer-newsletter .newsletter-form input[type=submit] {
+.footer .footer-newsletter .newsletter-form input[type="submit"] {
   border: 0;
   font-size: 16px;
   padding: 0 20px 2px 20px;
@@ -516,7 +518,7 @@ h6 {
   border-radius: 50px;
 }
 
-.footer .footer-newsletter .newsletter-form input[type=submit]:hover {
+.footer .footer-newsletter .newsletter-form input[type="submit"]:hover {
   background: rgba(var(--accent-color-rgb), 0.8);
 }
 
@@ -671,11 +673,11 @@ h6 {
   font-weight: 600;
 }
 
-.page-title nav ol li+li {
+.page-title nav ol li + li {
   padding-left: 10px;
 }
 
-.page-title nav ol li+li::before {
+.page-title nav ol li + li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
@@ -695,7 +697,6 @@ section,
 }
 
 @media (max-width: 1199px) {
-
   section,
   .section {
     scroll-margin-top: 66px;
@@ -884,7 +885,7 @@ section,
 # Counts Section
 --------------------------------------------------------------*/
 .counts {
-  --background-color: rgba(var(--default-color-rgb), .04);
+  --background-color: rgba(var(--default-color-rgb), 0.04);
   padding: 25px 0;
 }
 
@@ -1681,7 +1682,7 @@ section,
   padding-bottom: 40px;
 }
 
-.contact .info-item+.info-item {
+.contact .info-item + .info-item {
   margin-top: 40px;
 }
 
@@ -1756,8 +1757,8 @@ section,
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
+.contact .php-email-form input[type="text"],
+.contact .php-email-form input[type="email"],
 .contact .php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
@@ -1768,19 +1769,19 @@ section,
   border-color: rgba(var(--default-color-rgb), 0.2);
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form input[type="text"]:focus,
+.contact .php-email-form input[type="email"]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--accent-color);
 }
 
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
+.contact .php-email-form input[type="text"]::placeholder,
+.contact .php-email-form input[type="email"]::placeholder,
 .contact .php-email-form textarea::placeholder {
   color: rgba(var(--default-color-rgb), 0.3);
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   color: var(--contrast-color);
   background: var(--accent-color);
   border: 0;
@@ -1789,7 +1790,7 @@ section,
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: rgba(var(--accent-color-rgb), 0.8);
 }
 
@@ -1801,299 +1802,4 @@ section,
   100% {
     transform: rotate(360deg);
   }
-}
-
-.form-group {
-  margin-bottom: 1rem;
-}
-
-.form-control {
-  display: block;
-  width: 100%;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
-.btn-primary:hover {
-  color: #fff;
-  background-color: rgba(var(--accent-color-rgb), 0.85);
-  border-color: rgba(var(--accent-color-rgb), 0.85);
-}
-
-.r_container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 65vh;
-}
-
-.registration-box {
-  background-color: #fff;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  box-shadow: 0px 0px 30px rgba(var(--default-color-rgb), 0.15);
-  max-width: 500px;
-  width: 100%;
-}
-
-.registration-box h2 {
-  color: var(--accent-color);
-}
-
-.s-registration-box {
-  background-color: #fff;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  box-shadow: 0px 0px 30px rgba(var(--default-color-rgb), 0.15);
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.s-registration-box h2 {
-  color: var(--accent-color);
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
-.btn-primary:hover {
-  color: #fff;
-  background-color: rgba(var(--accent-color-rgb), 0.85);
-  border-color: rgba(var(--accent-color-rgb), 0.85);
-}
-
-.login-box {
-  background-color: #fff;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  box-shadow: 0px 0px 30px rgba(var(--default-color-rgb), 0.15);
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.login-box h2 {
-  color: var(--accent-color);
-}
-
-/* Welcome section */
-.welcome-section {
-  background-color: #333;
-  padding: 60px 0;
-  color: #fff;
-}
-
-.welcome-section h2 {
-  color: var(--accent-color);
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.welcome-section img {
-  max-width: 100%;
-  height: auto;
-  box-shadow: 0px 0px 10px rgba(var(#000000), 0.15);
-  border-radius: 5px;
-  margin-left: 10px;
-}
-
-/* Courses section */
-.courses-section,
-.subscribed-courses-section,
-.recommended-courses-section {
-  padding: 60px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.courses-section h3,
-.subscribed-courses-section h3,
-.recommended-courses-section h3 {
-  color: var(--accent-color);
-  font-size: 24px;
-  margin-bottom: 30px;
-  margin-right: 20px;
-  width: 100%;
-}
-
-.card {
-  border: none;
-  box-shadow: 0px 0px 30px rgba(var(--default-color-rgb), 0.15);
-  margin-bottom: 30px;
-  margin-right: 20px;
-  width: 300px;
-  max-width: 400px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-}
-
-.card-img-top {
-  border-top-left-radius: .25rem;
-  border-top-right-radius: .25rem;
-  margin-right: 20px;
-  height: 50%;
-  object-fit: cover;
-}
-
-.card-body {
-  padding: 20px;
-  flex-grow: 1;
-  margin-right: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card-title {
-  font-size: 20px;
-  margin-bottom: 10px;
-  margin-right: 20px;
-}
-
-/* Add course card */
-.add-course-card {
-  background-color: #f8f9fa;
-  text-align: center;
-  padding: 30px;
-  font-size: 24px;
-  width: 300px;
-  max-width: 400px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.add-course-card .card-title {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.add-course-card .card-text {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-.item {
-  width: 300px; /* Adjust the width of each item as needed */
-}
-
-/* Adjust the margin between items */
-.owl-carousel .owl-stage {
-  display: flex;
-}
-
-.owl-carousel .owl-item {
-  margin-right: 20px; /* Adjust the margin between items as needed */
-}
-
-/* Adjust the size of the carousel container */
-.course-carousel.owl-carousel.owl-theme {
-  width: 100%; /* Set the width to 100% to ensure it takes up the entire container */
-}
-
-
-/* Course section */
-.course-section {
-  padding: 60px 0;
-}
-
-.course-section h2 {
-  color: var(--accent-color);
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-
-.course-section h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-/* Video section */
-.video-section {
-  margin-bottom: 30px;
-  height: 500px;
-}
-
-.video-section .embed-responsive {
-  height: 100%;
-}
-
-.video-section .embed-responsive-item {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-
-.modules-section {
-  margin-bottom: 30px;
-  background-color: #f8f9fa;
-  padding: 30px;
-  border-radius: 5px;
-}
-
-.modules-section .card {
-  border: none;
-  box-shadow: 0px 0px 30px rgba(var(--default-color-rgb), 0.15);
-  margin-bottom: 10px;
-}
-
-.modules-section .card-header {
-  background-color: #fff;
-  border-bottom: none;
-  padding: 10px 20px;
-}
-
-.modules-section .card-body {
-  padding: 20px;
-}
-
-.modules-section button {
-  font-style: none;
-}
-
-.comments-section {
-  margin-top: 30px;
-}
-
-.comments-section h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.comments-section .media {
-  margin-bottom: 20px;
-}
-
-.comments-section .media img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.comments-section .media-body h5 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.comments-section form {
-  margin-top: 30px;
 }

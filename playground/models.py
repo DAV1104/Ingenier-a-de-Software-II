@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib.auth.hashers import make_password
 
 class Usuario(models.Model):
     id_usuario = models.AutoField(primary_key=True)
@@ -9,6 +10,10 @@ class Usuario(models.Model):
     password = models.CharField(max_length=255)
     rol = models.CharField(max_length=10, choices=[('moderador', 'Moderador'), ('profesor', 'Profesor'), ('estudiante', 'Estudiante')], default='estudiante')
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
+    
+    def save(self, *args, **kwargs):
+        self.password = make_password(self.password)
+        super().save(*args, **kwargs)
 
 class Moderador(models.Model):
     id_moderador = models.AutoField(primary_key=True)
